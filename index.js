@@ -189,7 +189,35 @@ app.post("/identify", async (req, res) => {
 });
 
 app.get("/", (_req, res) => {
-  res.send("Bitespeed Identity Reconciliation service (Node/Express + MongoDB) is running.");
+  res.send(
+    `
+<h1>Bitespeed Identity Reconciliation</h1>
+<p><strong>Bitespeed Identity Reconciliation service (Node/Express + MongoDB) is running.</strong></p>
+<p>Service is running on Render.</p>
+
+<h2>How to test the <code>/identify</code> API</h2>
+
+<h3>1. Using Postman</h3>
+<ol>
+  <li>Method: <strong>POST</strong></li>
+  <li>URL: <code>https://bitespeedassignment-38fh.onrender.com/identify</code></li>
+  <li>Header: <code>Content-Type: application/json</code></li>
+  <li>Body (raw JSON), for example:
+    <pre>{
+  "email": "lorraine@hillvalley.edu",
+  "phoneNumber": "123456"
+}</pre>
+  </li>
+</ol>
+
+<h3>2. Using curl</h3>
+<pre>curl -X POST https://bitespeedassignment-38fh.onrender.com/identify \\
+  -H "Content-Type: application/json" \\
+  -d '{"email":"lorraine@hillvalley.edu","phoneNumber":"123456"}'</pre>
+
+<p>You should receive a JSON response with <code>primaryContactId</code>, <code>emails</code>, <code>phoneNumbers</code> and <code>secondaryContactIds</code>.</p>
+`
+  );
 });
 
 app.listen(PORT, () => {
