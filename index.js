@@ -174,7 +174,7 @@ app.post("/identify", async (req, res) => {
 
     res.status(200).json({
       contact: {
-        primaryContatctId: primary._id.toString(),
+        primaryContactId: primary._id.toString(),
         emails,
         phoneNumbers,
         secondaryContactIds,
