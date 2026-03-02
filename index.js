@@ -197,10 +197,13 @@ app.get("/", (_req, res) => {
 
 <h2>How to test the <code>/identify</code> API</h2>
 
+<h3>Deployed URL</h3>
+<p><code>https://bitespeedassignment-1-hnng.onrender.com</code></p>
+
 <h3>1. Using Postman</h3>
 <ol>
   <li>Method: <strong>POST</strong></li>
-  <li>URL: <code>https://bitespeedassignment-38fh.onrender.com/identify</code></li>
+  <li>URL: <code>https://bitespeedassignment-1-hnng.onrender.com/identify</code></li>
   <li>Header: <code>Content-Type: application/json</code></li>
   <li>Body (raw JSON), for example:
     <pre>{
@@ -211,7 +214,7 @@ app.get("/", (_req, res) => {
 </ol>
 
 <h3>2. Using curl</h3>
-<pre>curl -X POST https://bitespeedassignment-38fh.onrender.com/identify \\
+<pre>curl -X POST https://bitespeedassignment-1-hnng.onrender.com/identify \\
   -H "Content-Type: application/json" \\
   -d '{"email":"lorraine@hillvalley.edu","phoneNumber":"123456"}'</pre>
 
